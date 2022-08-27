@@ -1,0 +1,168 @@
+
+
+:root {
+    /* colors */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    /* font size */
+    --Font-size: 15px;
+
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-light-gray);
+    height: 100vh;
+    color: #fff;
+}
+
+section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    /* height: 70vw; */
+}
+
+.sedans {
+    height: 27em;
+    width: 17em;
+    background: var(--Bright-orange);
+    padding: 2rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.suvs {
+    height: 27em;
+    width: 17em;
+    background: var(--Dark-cyan);
+    padding: 2rem;
+}
+
+.luxury {
+    height: 27em;
+    width: 17em;
+    background: var(--Very-dark-cyan);
+    padding: 2rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.car {
+    margin-top: 10px;
+}
+
+h1 {
+    color: var(--Very-light-gray);
+    margin-block: 20px;
+}
+
+p {
+    color: var(--Transparent-white);
+}
+
+.advs {
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+
+button {
+    width: 75%;
+    margin-block: 2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: var(--Very-light-gray);
+}
+
+button .sedan {
+    color: var(--Bright-orange);
+    font-size: var(--Font-size);
+}
+
+button .suv {
+    color: var(--Dark-cyan);
+    font-size: var(--Font-size);
+}
+
+button .lux {
+    color: var(--Very-dark-cyan);
+    font-size: var(--Font-size);
+}
+/* Active States */
+.first:hover {
+    background-color: var(--Bright-orange);
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+button .sedan:hover {
+    color: var(--Transparent-white);
+}
+
+.second:hover {
+    background: var(--Dark-cyan);
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+button .suv:hover {
+    color: var(--Transparent-white);
+}
+
+.third:hover {
+    background: var(--Very-dark-cyan);
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+button .lux:hover {
+    color: var(--Transparent-white);
+}
+
+@media (max-width: 500px) {
+    section {
+        margin-block: 2em;
+    }
+    section .container {
+        width: 70vw;
+        height: 80vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   .sedans {
+        /* height: ; */
+        background: var(--Bright-orange);
+        padding: 2rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        margin-top: 20px;
+    }
+    .suvs {
+        /* height: 27em;
+        width: 17em; */
+        background: var(--Dark-cyan);
+        padding: 2rem;
+    }
+    .luxury {
+        /* height: 27em;
+        width: 17em; */
+        background: var(--Very-dark-cyan);
+        padding: 2rem;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
